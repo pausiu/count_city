@@ -4,8 +4,8 @@ This app allows users to input a letter and receive the count of cities (from Op
 
 How to Run:
 1. Make sure Java 17+ is installed
-2. Build and run:
-```bash
+2. Switch to bash
+3. Type
 ./mvnw spring-boot:run
-3. The backend then runs on: http://localhost:8080
-4. Open index.html in your browser, then enter a letter and press "Check".
+4. The backend then runs on: http://localhost:8080
+5. Open index.html in your browser, then enter a letter and press "Check".
