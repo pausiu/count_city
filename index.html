@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Count City</title>
+</head>
+<body>
+  <h2>Search City Count by 1st Letter</h2>
+  <input type="text" id="letterInput" maxlength="1" placeholder="Enter a letter" />
+  <button onclick="getCount()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    async function getCount() {
+      const letter = document.getElementById("letterInput").value.toLowerCase();
+      const res = await fetch(`http://localhost:8080/api/count?letter=${letter}`);
+      const data = await res.json();
+      document.getElementById("result").innerText = `Cities starting with '${letter}': ${data.count}`;
+    }
+  </script>
+</body>
+</html>
